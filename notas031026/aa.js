@@ -10,13 +10,11 @@ formAluno.addEventListener('submit', async evento => {
     let erroValidação = validar(aluno)
     if(erroValidação){
         spanError.textContent = erroValidação
-        setTimeout(spanError.textContent="", 3000)
+        setTimeout(() => spanError.textContent="", 3000)
         return
     }
-    limparSpans();
     try{
-        let resposta = await fetch(
-            'processaAluno.php',{
+        let resposta = await fetch('processaAluno.php',{
                 method: "POST",
                 body: JSON.stringify(aluno),
                 headers: {"Content-Type":"application/json;charset=UTF-8"}
@@ -38,8 +36,8 @@ formAluno.addEventListener('submit', async evento => {
             throw new Error("Servidor retornando informações vazias")
         preencherDados(dados)
     }catch(erro){
-        spanError.textContent = erro.message //propriedade padrão message
-        setTimeout(spanError.textContent="", 3000)
+        spanError.textContent = erro.message //propriedade padrão message\
+        setTimeout(() => spanError.textContent="", 3000)
     }
 
 })
