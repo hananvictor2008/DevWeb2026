@@ -23,7 +23,7 @@ formAluno.addEventListener('submit', async evento =>{
     try{
         let resp = await fetch('processaAluno.php',{
             method: "POST",
-            body: JSON.stringfy(aluno),
+            body: JSON.stringify(aluno),
             headers: {"Content-Type":"application/json;charset=UTF-8"}
         })
 
@@ -37,7 +37,7 @@ formAluno.addEventListener('submit', async evento =>{
         if(!resp.ok){
             let msg = `URL: ${resp.url} - ${resp.status} - ${resp.statusText}`
             if(dados?.erro) msg = dados.erro
-            throw new Error(msg)
+            throw new Error(msg) //objeto padrão que será recebido no catch
         }
         //supondo que não houve erro de validação, faço a requisição do servidor
 
