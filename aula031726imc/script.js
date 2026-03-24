@@ -33,7 +33,7 @@ botao.addEventListener('click', async () => {
         }
 
         if(!resposta.ok){ //não retornou na faixa 200
-            let msg = `URL: ${resp.url} - ${resp.status} - ${resp.statusText}`
+            let msg = `URL: ${resposta.url} - ${resposta.status} - ${resposta.statusText}`
             if(dados?.erro) msg = dados.erro
             throw new Error(msg)
         }
@@ -49,6 +49,7 @@ botao.addEventListener('click', async () => {
 })
     
 function limparResposta(){
+    spanErro.textContent = ""
     spanResposta.textContent = ""
 }
 
