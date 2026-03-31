@@ -4,6 +4,7 @@ import { imc, classificacao, validar, limparElementos, imprimirErro  } from "./i
 //Recuperar o botão enviar e o span de erro
 const botao = document.querySelector("#btnEnviar")
 const spanErro = document.querySelector("#erro")
+
 //Registrar (addEventListener) o evento click do botão
 botao.addEventListener("click", ()  => {
     limparElementos("info")

@@ -1,0 +1,42 @@
+{"filmes":
+   [
+      {
+         "id": "1",
+         "titulo": "Uma Manhã Gloriosa",
+         "resumo": "Becky Fuller (Rachel McAdams) é uma jovem e batalhadora produtora de TV que fora demitida de um programa local de notícia. Ela é então contratada como produtora executiva de um programa matinal chamado \"Daybreak\", que ocupa o último lugar na classificação nacional. Para fazer subir a audiência, Fuller resolve contratar o lendário âncora de televisão Mike Pomeroy (Harrison Ford). Pomeroy, porém, se recusa a reportar assuntos comuns dos programas matinais e entra em conflito aberto com a coapresentadora do programa, Coleen Peck (Diane Keaton), e com todos em seu redor.",
+         "generos": [
+            "Comédia",
+            "Drama",
+            "Romance"
+         ],
+         "elenco": [
+            {"ator":"Rachel McAdams"},
+            {"ator":"Harrison Ford"},
+            {"ator":"Diane Keaton"}
+         ],
+         "lancamento": {
+            "pais": "Portugal",
+            "dia": "01 de abril de 2011"
+         }
+      },
+      {
+         "id": "2",
+         "titulo": "Amor a Toda Prova",
+         "resumo": "Cal Weaver (Steve Carell) tem quarenta e poucos anos e leva uma vida perfeita, com um bom emprego, filhos e um casamento com a namorada do colégio, Emily (Julianne Moore). Até que, ao descobrir que Emily o está traindo e quer o divórcio, sua vida desaba por completo. Forçado a voltar ao mundo dos solteiros, ele enfrenta as dificuldades habituais de quem não sabe mais como se portar para se aproximar de uma mulher. É quando entra em cena Jacob Palmer (Ryan Gosling), um amigo que passa a lhe dar algumas dicas.",
+         "generos": [
+            "Comédia",
+            "Comédia Romântica"
+         ],
+         "elenco": [
+            {"ator":"Steve Carell"},
+            {"ator":"Ryan Gosling"},
+            {"ator":"Emma Stone"},
+            {"ator":"Julianne Moore"}
+         ],
+         "lancamento": {
+            "pais": "Brasil",
+            "dia": "26 de agosto de 2011"
+         }
+      }
+   ]
+}
