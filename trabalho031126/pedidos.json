@@ -1,0 +1,171 @@
+{
+  "pedidos": [
+    {
+      "lanches": [
+        {
+          "nome": "X-Burguer",
+          "preco": 15.90,
+          "quantidade": 2
+        },
+        {
+          "nome": "X-Salada",
+          "preco": 18.90,
+          "quantidade": 1
+        }
+      ],
+      "bebidas": [
+        {
+          "nome": "Coca-Cola",
+          "preco": 6.50,
+          "quantidade": 3
+        },
+        {
+          "nome": "Suco de Laranja",
+          "preco": 7.00,
+          "quantidade": 1
+        }
+      ],
+      "sobremesas": [
+        {
+          "nome": "Sorvete",
+          "preco": 8.90,
+          "quantidade": 1
+        },
+        {
+          "nome": "Pudim",
+          "preco": 6.50,
+          "quantidade": 2
+        }
+      ]
+    },
+    {
+      "lanches": [
+        {
+          "nome": "X-Bacon",
+          "preco": 22.90,
+          "quantidade": 1
+        },
+        {
+          "nome": "X-Tudo",
+          "preco": 29.90,
+          "quantidade": 1
+        },
+        {
+          "nome": "X-Egg",
+          "preco": 17.90,
+          "quantidade": 2
+        }
+      ],
+      "bebidas": [
+        {
+          "nome": "Fanta Laranja",
+          "preco": 6.00,
+          "quantidade": 2
+        },
+        {
+          "nome": "Água Mineral",
+          "preco": 3.50,
+          "quantidade": 1
+        },
+        {
+          "nome": "Coca-Cola Zero",
+          "preco": 7.00,
+          "quantidade": 1
+        }
+      ],
+      "sobremesas": [
+        {
+          "nome": "Torta de Chocolate",
+          "preco": 9.90,
+          "quantidade": 1
+        },
+        {
+          "nome": "Mousse de Maracujá",
+          "preco": 7.90,
+          "quantidade": 1
+        }
+      ]
+    },
+    {
+      "lanches": [
+        {
+          "nome": "Veggie Burger",
+          "preco": 21.90,
+          "quantidade": 2
+        },
+        {
+          "nome": "X-Frango",
+          "preco": 19.90,
+          "quantidade": 1
+        }
+      ],
+      "bebidas": [
+        {
+          "nome": "Suco de Uva",
+          "preco": 7.50,
+          "quantidade": 2
+        },
+        {
+          "nome": "Sprite",
+          "preco": 5.50,
+          "quantidade": 1
+        }
+      ],
+      "sobremesas": [
+        {
+          "nome": "Petit Gateau",
+          "preco": 12.90,
+          "quantidade": 1
+        }
+      ]
+    },
+    {
+      "lanches": [
+        {
+          "nome": "X-Calabresa",
+          "preco": 20.90,
+          "quantidade": 1
+        },
+        {
+          "nome": "X-Picanha",
+          "preco": 32.90,
+          "quantidade": 1
+        },
+        {
+          "nome": "Mini Burguer",
+          "preco": 12.90,
+          "quantidade": 3
+        }
+      ],
+      "bebidas": [
+        {
+          "nome": "Pepsi",
+          "preco": 6.00,
+          "quantidade": 2
+        },
+        {
+          "nome": "Chá Gelado",
+          "preco": 5.00,
+          "quantidade": 1
+        },
+        {
+          "nome": "Coca-Cola 1L",
+          "preco": 10.00,
+          "quantidade": 1
+        }
+      ],
+      "sobremesas": [
+        {
+          "nome": "Brownie",
+          "preco": 7.90,
+          "quantidade": 2
+        },
+        {
+          "nome": "Cheesecake",
+          "preco": 11.90,
+          "quantidade": 1
+        }
+      ]
+    }
+  ]
+}
