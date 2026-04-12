@@ -6,19 +6,22 @@ function resposta(array|null $info, int $cod):void {
     die (json_encode($info));
 }
 
-function cacularTotal(float ...$n): float{
+function calcularTotal(array $pedido): float {
     $total = 0;
-    foreach ($n as $valor) {
-        $total += $valor;
+    foreach ($pedido['lanches'] as $item) {
+        $total += $item['preco'] * $item['quantidade'];
+    }
+    foreach ($pedido['bebidas'] as $item) {
+        $total += $item['preco'] * $item['quantidade'];
+    }
+    foreach ($pedido['sobremesas'] as $item) {
+        $total += $item['preco'] * $item['quantidade'];
     }
     return $total;
 }
 
-function validar(string $pedido):string{
+function validar(string $pedido):void{
     if (!$pedido) resposta(["erro" => "Problema de conversão com JSON"], 400);
-    if (!isset($pedido["nome"], $pedido["nota1"], $pedido["nota2"])) resposta(["erro" => "Informações faltando"], 400);
-    if ($pedido["nome"] == "") resposta(["erro" => "Nome vazio"], 400);
-    if (!is_numeric($pedido["nota1"]) || !is_numeric($pedido["nota2"])) resposta(["erro" => "Notas devem ser um número"], 400);
+    if (!($pedido['lanches'] || $pedido['bebidas'] || $pedido['sobremesas'])) resposta(['erro' => 'Pedido totamente vazio'], 400);
 }
-
 ?>

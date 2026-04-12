@@ -2,11 +2,13 @@
   "pedidos": {
     "lanches": [
       {
+        "id": 1,
         "nome": "Veggie Burger",
         "preco": 21.90,
         "quantidade": 2
       },
       {
+        "id": 2,
         "nome": "X-Frango",
         "preco": 19.90,
         "quantidade": 1
@@ -14,11 +16,13 @@
     ],
     "bebidas": [
       {
+        "id": 101,
         "nome": "Suco de Uva",
         "preco": 7.50,
         "quantidade": 2
       },
       {
+        "id": 102,
         "nome": "Sprite",
         "preco": 5.50,
         "quantidade": 1
@@ -26,6 +30,7 @@
     ],
     "sobremesas": [
       {
+        "id": 201,
         "nome": "Petit Gateau",
         "preco": 12.90,
         "quantidade": 1
