@@ -5,11 +5,9 @@ const spanErro = document.createElement('span');
 
 (async () => {
     try {
-        const [lanchesResp, bebidasResp, sobremesasResp] = await Promise.all([
-            fetch('JSONs/lanches.json'),
-            fetch('JSONs/bebidas.json'),
-            fetch('JSONs/sobremesas.json')
-        ]);
+        const lanchesResp = await fetch('JSONs/lanches.json')
+        const bebidasResp = await fetch('JSONs/bebidas.json')
+        const sobremesasResp = await fetch('JSONs/sobremesas.json')
 
         if (!lanchesResp.ok) throw new Error(`Erro ao carregar lanches: ${lanchesResp.status}`);
         if (!bebidasResp.ok) throw new Error(`Erro ao carregar bebidas: ${bebidasResp.status}`);
@@ -18,10 +16,6 @@ const spanErro = document.createElement('span');
         const lanchesData = await lanchesResp.json();
         const bebidasData = await bebidasResp.json();
         const sobremesasData = await sobremesasResp.json();
-
-        const lanches = lanchesData.lanches || lanchesData;
-        const bebidas = bebidasData.bebidas || bebidasData;
-        const sobremesas = sobremesasData.sobremesas || sobremesasData;
 
         console.log('Lanches carregados:', lanches);
         console.log('Bebidas carregadas:', bebidas);
