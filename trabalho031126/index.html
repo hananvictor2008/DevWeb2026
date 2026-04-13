@@ -1,11 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lanchonete do CEFET</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
+
+<header>
+    <h1>Lanchonete do CEFET</h1>
+</header>
+
+<div class="layout">
+
+    <section class="menu" id="menu">
+        <h3>Lanches</h3>
+        <div id="lanches"></div>
+         <h3>Bebidas</h3>
+        <div id="bebidas"></div>
+         <h3>Sobremesas</h3>
+        <div id="sobremesas"></div>
+    </section>
+  <section id="sideBar">
     
+    <div class="carrinho">
+        <h2>Carrinho</h2>
+        <ul id="listaCarrinho"></ul>
+        <div class="total" id="total">Total: <span id="total"></span></div>
+    </div>
+    </section>
+    
+
+</div>
 </body>
 </html>
