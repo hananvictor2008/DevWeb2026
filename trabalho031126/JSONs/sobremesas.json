@@ -3,134 +3,62 @@
         {
             "id": 201,
             "nome": "Sorvete de Chocolate",
-            "descricao": "Sorvete de chocolate com calda",
-            "preco": 8.90,
-            "categoria": "sobremesa",
-            "disponivel": true,
-            "tamanho": "médio",
-            "cobertura": "calda de chocolate",
-            "imagem": "sorvete-chocolate.jpg"
+            "preco": 8.90
         },
         {
             "id": 202,
             "nome": "Sorvete de Morango",
-            "descricao": "Sorvete de morango com calda",
-            "preco": 8.90,
-            "categoria": "sobremesa",
-            "disponivel": true,
-            "tamanho": "médio",
-            "cobertura": "calda de morango",
-            "imagem": "sorvete-morango.jpg"
+            "preco": 8.90
         },
         {
             "id": 203,
             "nome": "Pudim",
-            "descricao": "Pudim de leite condensado com calda de caramelo",
-            "preco": 6.50,
-            "categoria": "sobremesa",
-            "disponivel": true,
-            "tamanho": "individual",
-            "calda": "caramelo",
-            "imagem": "pudim.jpg"
+            "preco": 6.50
         },
         {
             "id": 204,
             "nome": "Torta de Chocolate",
-            "descricao": "Torta de chocolate com cobertura de granulado",
-            "preco": 9.90,
-            "categoria": "sobremesa",
-            "disponivel": true,
-            "fatia": "média",
-            "cobertura": "granulado",
-            "imagem": "torta-chocolate.jpg"
+            "preco": 9.90
         },
         {
             "id": 205,
             "nome": "Torta de Limão",
-            "descricao": "Torta de limão com merengue",
-            "preco": 9.90,
-            "categoria": "sobremesa",
-            "disponivel": true,
-            "fatia": "média",
-            "cobertura": "merengue",
-            "imagem": "torta-limao.jpg"
+            "preco": 9.90
         },
         {
             "id": 206,
             "nome": "Petit Gateau",
-            "descricao": "Bolachinho de chocolate com recheio derretido",
-            "preco": 12.90,
-            "categoria": "sobremesa",
-            "disponivel": true,
-            "tamanho": "individual",
-            "acompanha": "sorvete de baunilha",
-            "imagem": "petit-gateau.jpg"
+            "preco": 12.90
         },
         {
             "id": 207,
             "nome": "Brownie",
-            "descricao": "Brownie de chocolate com nozes",
-            "preco": 7.90,
-            "categoria": "sobremesa",
-            "disponivel": true,
-            "tamanho": "médio",
-            "acompanha": "calda de chocolate",
-            "imagem": "brownie.jpg"
+            "preco": 7.90
         },
         {
             "id": 208,
             "nome": "Cheesecake",
-            "descricao": "Cheesecake de frutas vermelhas",
-            "preco": 11.90,
-            "categoria": "sobremesa",
-            "disponivel": true,
-            "fatia": "média",
-            "cobertura": "frutas vermelhas",
-            "imagem": "cheesecake.jpg"
+            "preco": 11.90
         },
         {
             "id": 209,
             "nome": "Mousse de Maracujá",
-            "descricao": "Mousse de maracujá com calda",
-            "preco": 7.90,
-            "categoria": "sobremesa",
-            "disponivel": true,
-            "tamanho": "individual",
-            "calda": "maracujá",
-            "imagem": "mousse-maracuja.jpg"
+            "preco": 7.90
         },
         {
             "id": 210,
             "nome": "Mousse de Chocolate",
-            "descricao": "Mousse de chocolate belga",
-            "preco": 8.90,
-            "categoria": "sobremesa",
-            "disponivel": true,
-            "tamanho": "individual",
-            "cobertura": "chocolate granulado",
-            "imagem": "mousse-chocolate.jpg"
+            "preco": 8.90
         },
         {
             "id": 211,
             "nome": "Açaí",
-            "descricao": "Açaí na tigela com granola, banana e mel",
-            "preco": 14.90,
-            "categoria": "sobremesa",
-            "disponivel": true,
-            "tamanho": "300ml",
-            "acompanha": "granola, banana, mel",
-            "imagem": "acai.jpg"
+            "preco": 14.90
         },
         {
             "id": 212,
             "nome": "Salada de Frutas",
-            "descricao": "Salada de frutas frescas da estação",
-            "preco": 9.90,
-            "categoria": "sobremesa",
-            "disponivel": true,
-            "tamanho": "300ml",
-            "frutas": ["banana", "maçã", "laranja", "morango", "uva"],
-            "imagem": "salada-frutas.jpg"
+            "preco": 9.90
         }
     ]
 }

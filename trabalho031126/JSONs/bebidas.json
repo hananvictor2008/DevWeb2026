@@ -3,170 +3,77 @@
         {
             "id": 101,
             "nome": "Coca-Cola",
-            "descricao": "Refrigerante de cola 350ml",
-            "preco": 6.50,
-            "categoria": "bebida",
-            "disponivel": true,
-            "tamanho": "350ml",
-            "gelo": true,
-            "imagem": "coca-cola.jpg"
+            "preco": 6.50
         },
         {
             "id": 102,
             "nome": "Coca-Cola Zero",
-            "descricao": "Refrigerante de cola zero açúcar 350ml",
-            "preco": 7.00,
-            "categoria": "bebida",
-            "disponivel": true,
-            "tamanho": "350ml",
-            "gelo": true,
-            "imagem": "coca-cola-zero.jpg"
+            "preco": 7.00
         },
         {
             "id": 103,
             "nome": "Coca-Cola 1L",
-            "descricao": "Refrigerante de cola 1 litro",
-            "preco": 10.00,
-            "categoria": "bebida",
-            "disponivel": true,
-            "tamanho": "1L",
-            "gelo": false,
-            "imagem": "coca-cola-1l.jpg"
+            "preco": 10.00
         },
         {
             "id": 104,
             "nome": "Guaraná",
-            "descricao": "Refrigerante de guaraná 350ml",
-            "preco": 5.00,
-            "categoria": "bebida",
-            "disponivel": true,
-            "tamanho": "350ml",
-            "gelo": true,
-            "imagem": "guarana.jpg"
+            "preco": 5.00
         },
         {
             "id": 105,
             "nome": "Sprite",
-            "descricao": "Refrigerante de limão 350ml",
-            "preco": 5.50,
-            "categoria": "bebida",
-            "disponivel": true,
-            "tamanho": "350ml",
-            "gelo": true,
-            "imagem": "sprite.jpg"
+            "preco": 5.50
         },
         {
             "id": 106,
             "nome": "Fanta Laranja",
-            "descricao": "Refrigerante de laranja 350ml",
-            "preco": 6.00,
-            "categoria": "bebida",
-            "disponivel": true,
-            "tamanho": "350ml",
-            "gelo": true,
-            "imagem": "fanta-laranja.jpg"
+            "preco": 6.00
         },
         {
             "id": 107,
             "nome": "Pepsi",
-            "descricao": "Refrigerante de cola 350ml",
-            "preco": 6.00,
-            "categoria": "bebida",
-            "disponivel": true,
-            "tamanho": "350ml",
-            "gelo": true,
-            "imagem": "pepsi.jpg"
+            "preco": 6.00
         },
         {
             "id": 108,
             "nome": "Suco de Laranja",
-            "descricao": "Suco natural de laranja 300ml",
-            "preco": 7.00,
-            "categoria": "bebida",
-            "disponivel": true,
-            "tamanho": "300ml",
-            "natural": true,
-            "gelo": true,
-            "imagem": "suco-laranja.jpg"
+            "preco": 7.00
         },
         {
             "id": 109,
             "nome": "Suco de Uva",
-            "descricao": "Suco natural de uva 300ml",
-            "preco": 7.50,
-            "categoria": "bebida",
-            "disponivel": true,
-            "tamanho": "300ml",
-            "natural": true,
-            "gelo": true,
-            "imagem": "suco-uva.jpg"
+            "preco": 7.50
         },
         {
             "id": 110,
             "nome": "Suco de Limão",
-            "descricao": "Suco natural de limão 300ml",
-            "preco": 6.50,
-            "categoria": "bebida",
-            "disponivel": true,
-            "tamanho": "300ml",
-            "natural": true,
-            "gelo": true,
-            "imagem": "suco-limao.jpg"
+            "preco": 6.50
         },
         {
             "id": 111,
             "nome": "Água Mineral",
-            "descricao": "Água mineral sem gás 500ml",
-            "preco": 3.50,
-            "categoria": "bebida",
-            "disponivel": true,
-            "tamanho": "500ml",
-            "gelo": false,
-            "imagem": "agua-mineral.jpg"
+            "preco": 3.50
         },
         {
             "id": 112,
             "nome": "Água com Gás",
-            "descricao": "Água mineral com gás 500ml",
-            "preco": 4.00,
-            "categoria": "bebida",
-            "disponivel": true,
-            "tamanho": "500ml",
-            "gelo": true,
-            "imagem": "agua-gas.jpg"
+            "preco": 4.00
         },
         {
             "id": 113,
             "nome": "Chá Gelado",
-            "descricao": "Chá preto gelado com limão 300ml",
-            "preco": 5.00,
-            "categoria": "bebida",
-            "disponivel": true,
-            "tamanho": "300ml",
-            "gelo": true,
-            "imagem": "cha-gelado.jpg"
+            "preco": 5.00
         },
         {
             "id": 114,
             "nome": "Milkshake Chocolate",
-            "descricao": "Milkshake de chocolate 400ml",
-            "preco": 12.90,
-            "categoria": "bebida",
-            "disponivel": true,
-            "tamanho": "400ml",
-            "gelo": true,
-            "imagem": "milkshake-chocolate.jpg"
+            "preco": 12.90
         },
         {
             "id": 115,
             "nome": "Milkshake Morango",
-            "descricao": "Milkshake de morango 400ml",
-            "preco": 12.90,
-            "categoria": "bebida",
-            "disponivel": true,
-            "tamanho": "400ml",
-            "gelo": true,
-            "imagem": "milkshake-morango.jpg"
+            "preco": 12.90
         }
     ]
 }

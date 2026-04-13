@@ -3,102 +3,52 @@
         {
             "id": 1,
             "nome": "X-Burguer",
-            "descricao": "Pão, hambúrguer, queijo, alface e tomate",
-            "preco": 15.90,
-            "categoria": "lanche",
-            "disponivel": true,
-            "ingredientes": ["pão", "hambúrguer", "queijo", "alface", "tomate"],
-            "imagem": "x-burguer.jpg"
+            "preco": 15.90
         },
         {
             "id": 2,
             "nome": "X-Salada",
-            "descricao": "Pão, hambúrguer, queijo, alface, tomate e ovo",
-            "preco": 18.90,
-            "categoria": "lanche",
-            "disponivel": true,
-            "ingredientes": ["pão", "hambúrguer", "queijo", "alface", "tomate", "ovo"],
-            "imagem": "x-salada.jpg"
+            "preco": 18.90
         },
         {
             "id": 3,
             "nome": "X-Bacon",
-            "descricao": "Pão, hambúrguer, queijo, bacon, alface e tomate",
-            "preco": 22.90,
-            "categoria": "lanche",
-            "disponivel": true,
-            "ingredientes": ["pão", "hambúrguer", "queijo", "bacon", "alface", "tomate"],
-            "imagem": "x-bacon.jpg"
+            "preco": 22.90
         },
         {
             "id": 4,
             "nome": "X-Tudo",
-            "descricao": "Pão, hambúrguer, queijo, bacon, ovo, presunto, alface e tomate",
-            "preco": 29.90,
-            "categoria": "lanche",
-            "disponivel": true,
-            "ingredientes": ["pão", "hambúrguer", "queijo", "bacon", "ovo", "presunto", "alface", "tomate"],
-            "imagem": "x-tudo.jpg"
+            "preco": 29.90
         },
         {
             "id": 5,
             "nome": "Veggie Burger",
-            "descricao": "Pão integral, hambúrguer de grão-de-bico, queijo vegano, alface, tomate e cenoura ralada",
-            "preco": 21.90,
-            "categoria": "lanche",
-            "disponivel": true,
-            "ingredientes": ["pão integral", "hambúrguer vegano", "queijo vegano", "alface", "tomate", "cenoura"],
-            "imagem": "veggie-burger.jpg"
+            "preco": 21.90
         },
         {
             "id": 6,
             "nome": "X-Frango",
-            "descricao": "Pão, filé de frango empanado, queijo, alface e tomate",
-            "preco": 19.90,
-            "categoria": "lanche",
-            "disponivel": true,
-            "ingredientes": ["pão", "filé de frango", "queijo", "alface", "tomate"],
-            "imagem": "x-frango.jpg"
+            "preco": 19.90
         },
         {
             "id": 7,
             "nome": "X-Calabresa",
-            "descricao": "Pão, hambúrguer, queijo, calabresa fatiada, cebola e alface",
-            "preco": 20.90,
-            "categoria": "lanche",
-            "disponivel": true,
-            "ingredientes": ["pão", "hambúrguer", "queijo", "calabresa", "cebola", "alface"],
-            "imagem": "x-calabresa.jpg"
+            "preco": 20.90
         },
         {
             "id": 8,
             "nome": "X-Picanha",
-            "descricao": "Pão, picanha grelhada, queijo, cebola caramelizada e alface",
-            "preco": 32.90,
-            "categoria": "lanche",
-            "disponivel": true,
-            "ingredientes": ["pão", "picanha", "queijo", "cebola caramelizada", "alface"],
-            "imagem": "x-picanha.jpg"
+            "preco": 32.90
         },
         {
             "id": 9,
             "nome": "Mini Burguer",
-            "descricao": "Mini hambúrguer com queijo e alface (unidade)",
-            "preco": 12.90,
-            "categoria": "lanche",
-            "disponivel": true,
-            "ingredientes": ["pão mini", "hambúrguer", "queijo", "alface"],
-            "imagem": "mini-burguer.jpg"
+            "preco": 12.90
         },
         {
             "id": 10,
             "nome": "X-Egg",
-            "descricao": "Pão, hambúrguer, queijo, ovo frito, alface e tomate",
-            "preco": 17.90,
-            "categoria": "lanche",
-            "disponivel": true,
-            "ingredientes": ["pão", "hambúrguer", "queijo", "ovo", "alface", "tomate"],
-            "imagem": "x-egg.jpg"
+            "preco": 17.90
         }
     ]
 }
