@@ -20,8 +20,9 @@ function calcularTotal(array $pedido): float {
     return $total;
 }
 
-function validar(string $pedido):void{
+function validar(array $pedido):void{
     if (!$pedido) resposta(["erro" => "Problema de conversão com JSON"], 400);
-    if (!($pedido['lanches'] || $pedido['bebidas'] || $pedido['sobremesas'])) resposta(['erro' => 'Pedido totamente vazio'], 400);
+    if (empty($pedido['lanches']) && empty($pedido['bebidas']) && empty($pedido['sobremesas']))
+        resposta(['erro' => 'Pedido totalmente vazio'], 400);
 }
 ?>
