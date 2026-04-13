@@ -1,55 +1,106 @@
-const spanError = document.querySelector("#erro")
-const formAluno = document.querySelector("#formMedia")
-formAluno.addEventListener('submit', async evento => {
-    evento.preventDefault();
-    const pedido = {
-        nome: document.querySelector("#lanches").value.trim(),
-        nota1: Number(document.querySelector("#bebidas").value),
-        nota2: Number(document.querySelector("#sobresas").value)
+const divLanches = document.querySelector("#lanches");
+const divBebidas = document.querySelector("#bebidas");
+const divSobremesas = document.querySelector("#sobremesas");
+(() => {
+    let lanches={};
+    let bebidas={};
+    let sobremesas={};
+    fetch('lanches.json')
+        .then(resp => {
+            if (!resp.ok) throw new Error(`Erro: ${resp.status} - ${resp.statusText}`)
+            return resp.json()
+        })
+        .then(dados => {
+            console.log(dados.lanches)
+            lanches = dados.lanches;
+        })
+
+        .catch(erro => imprimirErro(erro.massage, spanErro, 3000))
+
+    fetch('bebidas.json')
+        .then(resp => {
+            if (!resp.ok) throw new Error(`Erro: ${resp.status} - ${resp.statusText}`)
+            return resp.json()
+        })
+        .then(dados => {
+            console.log(dados.bebidas)
+
+            bebidas = dados.bebidas;
+        })
+        .catch(erro => imprimirErro(erro.massage, spanErro, 3000))
+
+    fetch('sobremesas.json')
+        .then(resp => {
+            if (!resp.ok) throw new Error(`Erro: ${resp.status} - ${resp.statusText}`)
+            return resp.json()
+        })
+        .then(dados => {
+            console.log(dados.sobremesas)
+
+            sobremesas = dados.sobremesas;
+        })
+
+        .catch(erro => imprimirErro(erro.massage, spanErro, 3000))
+    montarListaDePedidos(lanches, bebidas, sobremesas);
+
+})();
+function montarListaDePedidos(lanches, bebidas, sobremesas) {
+    while (divLanches.firstChild) {
+        divLanches.removeChild(divLanches.firstChild)
     }
-    let erroValidação = validar(pedido)
-    if(erroValidação){
-        spanError.textContent = erroValidação
-        setTimeout(() => spanError.textContent="", 3000)
-        return
+    while (divBebidas.firstChild) {
+        divBebidas.removeChild(divBebidas.firstChild)
     }
-    try{
-        let resposta = await fetch('server.php',{
-                method: "POST",
-                body: JSON.stringify(pedido),
-                headers: {"Content-Type":"application/json;charset=UTF-8"}
-            })
-        let dados = null
-        try{
-            dados = await resposta.json()
-        }catch{
-            //apenas mantem como estava, no caso null
-        }
-
-        if(!resposta.ok){ //não retornou na faixa 200
-            let msg = `URL: ${resp.url} - ${resp.status} - ${resp.statusText}`
-            if(dados?.erro) msg = dados.erro
-            throw new Error(msg)
-        }
-
-        if(!dados)
-            throw new Error("Servidor retornando informações vazias")
-        preencherDados(dados)
-    }catch(erro){
-        spanError.textContent = erro.message //propriedade padrão message\
-        setTimeout(() => spanError.textContent="", 3000)
+    while (divSobremesas.firstChild) {
+        divSobremesas.removeChild(divSobremesas.firstChild)
     }
 
-})
 
-//Funções
+    lanches.forEach(lanche => {
+        const { id, nome, preco } = lanche;
+        const div = document.createElement("div");
+        div.className = "cardDeProduto";
+        div.setAttribute('data-id', lanche.id);
+        div.setAttribute('data-nome', lanche.nome);
+        div.setAttribute('data-preco', lanche.preco);
+        div.innerHTML= `
+        <h4>${lanche.nome}</h4>
+        <p class="preco">R$ ${lanche.preco.toFixed(2)}</p>
+        <button class="btn-adicionar" data-id="${lanche.id}">
+            Adicionar ao Carrinho
+        </button>`
+    
+        })
+    bebidas.forEach(bebida => {
+        const { id, nome, preco } = bebida;
+        const div = document.createElement("div");
+        div.className = "cardDeProduto";
+        div.setAttribute('data-id', bebida.id);
+        div.setAttribute('data-nome', bebida.nome);
+        div.setAttribute('data-preco', bebida.preco);
+        div.innerHTML= `
+        <h4>${bebida.nome}</h4>
+        <p class="preco">R$ ${bebida.preco.toFixed(2)}</p>
+        <button class="btn-adicionar" data-id="${bebida.id}">
+            Adicionar ao Carrinho
+        </button>`
+    
+        })
 
-function limparSpans(){
-    let displays = document.querySelectorAll(".info")
-}
+        bebidas.forEach(bebida => {
+        const { id, nome, preco } = bebida;
+        const div = document.createElement("div");
+        div.className = "cardDeProduto";
+        div.setAttribute('data-id', bebida.id);
+        div.setAttribute('data-nome', bebida.nome);
+        div.setAttribute('data-preco', bebida.preco);
+        div.innerHTML= `
+        <h4>${bebida.nome}</h4>
+        <p class="preco">R$ ${bebida.preco.toFixed(2)}</p>
+        <button class="btn-adicionar" data-id="${bebida.id}">
+            Adicionar ao Carrinho
+        </button>`
+    
+        })
+    }
 
-function preencherDados({nome, media, grau}){
-    document.querySelector("#alunoNome").textContent = nome
-    document.querySelector("#alunoMedia").textContent = media
-    document.querySelector("#alunoGrau").textContent = grau
-}
