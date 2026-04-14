@@ -21,9 +21,9 @@ let carrinho = [];
         const bebidasData = await bebidasResp.json();
         const sobremesasData = await sobremesasResp.json();
         
-        const lanches = lanchesData.lanches || lanchesData;
-        const bebidas = bebidasData.bebidas || bebidasData;
-        const sobremesas = sobremesasData.sobremesas || sobremesasData;
+        const lanches = lanchesData.lanches
+        const bebidas = bebidasData.bebidas
+        const sobremesas = sobremesasData.sobremesas
 
         lanches.forEach(lanche => {
             lanche.tipo = 'lanche'
