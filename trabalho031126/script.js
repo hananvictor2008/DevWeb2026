@@ -156,7 +156,11 @@ divTotal.addEventListener('click', () => {
 
 async function enviarPedido(carrinho) {
     if (carrinho.length === 0) {
-        alert('Carrinho vazio!');
+        document.querySelector("#total").textContent = 0
+        spanErro.textContent = "Carrinho vazio"
+        setTimeout(() => {
+            spanErro.textContent = ""
+        }, 3000)
         return;
     }
 

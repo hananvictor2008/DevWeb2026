@@ -6,6 +6,11 @@
             "preco": 6.50
         },
         {
+            "id": 116,
+            "nome": "Guaravita",
+            "preco": 2.50
+        },
+        {
             "id": 102,
             "nome": "Coca-Cola Zero",
             "preco": 7.00
