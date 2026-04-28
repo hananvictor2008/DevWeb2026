@@ -17,10 +17,18 @@ let carrinho = [];
         if (!bebidasResp.ok) throw new Error(`Erro ao carregar bebidas: ${bebidasResp.status}`);
         if (!sobremesasResp.ok) throw new Error(`Erro ao carregar sobremesas: ${sobremesasResp.status}`);
 
+    } catch (erro) {
+        console.error('Erro ao carregar dados:', erro);
+        imprimirErro(erro.message, spanErro, 3000);
+    }
+    try{
         const lanchesData = await lanchesResp.json();
         const bebidasData = await bebidasResp.json();
         const sobremesasData = await sobremesasResp.json();
-        
+    }catch{
+        console.log('Erro ao converter para JSON');
+        imprimirErro('Erro ao converter para JSON', spanErro, 3000)
+    } 
         const lanches = lanchesData.lanches
         const bebidas = bebidasData.bebidas
         const sobremesas = sobremesasData.sobremesas
@@ -41,10 +49,6 @@ let carrinho = [];
 
         montarListaDePedidos(lanches, bebidas, sobremesas);
 
-    } catch (erro) {
-        console.error('Erro ao carregar dados:', erro);
-        imprimirErro(erro.message, spanErro, 3000);
-    }
 })()
 
 function montarListaDePedidos(lanches, bebidas, sobremesas) {
@@ -148,7 +152,7 @@ function atualizarCarrinho() {
     console.log(carrinho)
 }
 
-//==============================Requisição pro PHP ========================================================
+//Requisição pro PHP
 
 divTotal.addEventListener('click', () => {
     enviarPedido(carrinho)
@@ -177,9 +181,15 @@ async function enviarPedido(carrinho) {
         
         let dados = null
         try{
+            /*dados = {
+                ok: await resp.ok(),
+                status: await resp.status(),
+
+            }*/
             dados = await resp.json()
         }catch{
-            //não deu p/ transformar em JSON
+            console.log('Erro ao converter para JSON');
+            imprimirErro('Erro ao converter para JSON', spanErro, 3000)
         }
 
         if(!resp.ok){
@@ -193,6 +203,8 @@ async function enviarPedido(carrinho) {
         setTimeout(()=>spanErro.textContent="", 3000)
     }
 }
+
+//funções
 
 function montaPedido(carrinho){
     let lanches = []
