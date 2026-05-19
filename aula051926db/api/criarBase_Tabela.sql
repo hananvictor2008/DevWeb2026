@@ -1,0 +1,15 @@
+CREATE DATABASE IF NOT EXISTS basealunos
+	DEFAULT CHARACTER SET utf8mb4
+    DEFAULT COLLATE utf8mb4_general_ci;
+    
+USE basealunos;
+ 
+CREATE TABLE IF NOT EXISTS aluno(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(40) NOT NULL,
+    nota1 DECIMAL(9,2) NOT NULL CHECK (nota1 BETWEEN 0 AND 10),
+    nota2 DECIMAL(9,2) NOT NULL CHECK (nota2 BETWEEN 0 AND 10),
+    media DECIMAL(9,2) NOT NULL CHECK (media BETWEEN 0 AND 10),
+    grau ENUM('A', 'B', 'C', 'D', 'E') NOT NULL,
+    UNIQUE INDEX unq_aluno__nome(nome)
+) ENGINE=INNODB;

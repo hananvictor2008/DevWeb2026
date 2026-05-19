@@ -15,6 +15,16 @@ export async function fazRequisicaoAA( url, metodo, dados=null){
     return await fetch(url, configs)
 }
 
+export function fazRequisicao( url, metodo, dados=null){
+    if(metodo === 'GET') return fetch(url)
+    let configs = {
+        method: metodo,
+        headers: { 'Content-type': 'application/json; charset=UTF-8'},
+        body: (dados)?JSON.stringify(dados):null
+    }
+    return fetch(url, configs)
+}
+
 export async function verificarErros(resp) {
     let dados = null
         try{
