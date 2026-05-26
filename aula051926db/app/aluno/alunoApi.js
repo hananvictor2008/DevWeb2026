@@ -9,10 +9,18 @@ export async function insere( aluno ) {
 }
 
 export async function lista( ) {
-        let resposta =  await fazRequisicaoAA( url+'listar.php' ); 
+        let resposta =  await fazRequisicaoAA( url+'listar.php' );
         let dados = await verificaErros( resposta );
         if( ! dados )
             throw new Error(' Dados esperados ausentes.  ');
         return dados;
+}
+
+export async function remover(id){
+    let resposta = await fazRequisicaoAA( url+'remover.php?id='+id, 'DELETE');
+    if(resposta.status === 204) return;
+    let dados = await verificaErros(resposta);
+    if(!dados) throw new Error('Dados esperados ausentes');
+    return dados;
 }
 

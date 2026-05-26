@@ -28,5 +28,5 @@ try{
     elseif ($codErro == 4025) responderJson(['erro'=>"Erro de VIOLAÇÃO DE REGRA(S) DE CHECK para aluno. {$e->getMessage()}"], 400);
     else responderJson(['erro'=>"Erro ao inserir aluno. {$e->getMessage()}'", 400]);
 }
-responderJson($aluno);
+responderJson($aluno, 201);
 ?>

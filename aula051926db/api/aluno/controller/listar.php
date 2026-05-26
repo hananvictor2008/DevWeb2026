@@ -8,7 +8,7 @@ try{
     $sql = 'SELECT id, nome, nota1, nota2, media, grau FROM aluno';
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
-    $aluno =  $stmt->fetchAll(PDO::FETCH_ASSOC); //retorna as linhas como matriz associativa
+    $alunos = $stmt->fetchAll(PDO::FETCH_ASSOC); //retorna as linhas como matriz associativa
 }catch (PDOException $e){
     responderJson(['erro'=>'Erro ao listar os alunos', 400]);
 }

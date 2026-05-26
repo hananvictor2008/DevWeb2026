@@ -1,15 +1,36 @@
 import { limpaElementos, exibeErro, limpaForm } from "../js/util.js";
-import { spanErro, formAluno, preencheDados, valida } from "./alunoUtil.js";
-import { insere, lista } from "./alunoApi.js";
+import { spanErro, formAluno, preencheDados, valida, preencherTabela } from "./alunoUtil.js";
+import { insere, lista, remover } from "./alunoApi.js";
 
 document.addEventListener('DOMContentLoaded', async ()=>{
 //Requisição para listar
 try{
-        let dados = await lista();
-        console.log(dados)
+        let alunos = await lista();
+        preencherTabela(alunos);
      } catch (erro) {
         exibeErro(spanErro, erro.message, 3000);
-    }     
+    }
+})
+
+const tblAlunos = document.querySelector('#tblAluno tbody')
+tblAlunos.addEventListener('click', async e => {
+    const elementoDom = e.target;
+    console.log(elementoDom)
+    if(elementoDom.tagName === 'BUTTON'){
+        const botao = elementoDom;
+        console.log(botao)
+        if(botao.textContent === '[EXCLUIR]'){
+            try{
+                await remover(botao.dataset.id);
+                let alunos = await lista();
+                preencherTabela(alunos);
+            }catch(erro){
+                exibeErro(spanErro, erro.message, 3000)
+            }
+        }else if(botao.textContent === '[ALTERAR]'){
+            ;
+        }
+    }
 })
 
 formAluno.addEventListener('submit', async e => {
@@ -32,9 +53,13 @@ formAluno.addEventListener('submit', async e => {
         let dados = await insere( aluno );
         preencheDados( dados );
         limpaForm(formAluno);
-        await lista();
+        setTimeout(()=>{
+            limpaElementos('.info');
+        }, 3000);
+        let alunos = await lista();
+        preencherTabela(alunos);
      } catch (erro) {
         exibeErro(spanErro, erro.message, 3000);
-    } 
+    }
 })
 //Fim do addEventListener
