@@ -1,13 +1,14 @@
 import { limpaElementos, exibeErro, limpaForm } from "../js/util.js";
-import { spanErro, formAluno, preencheDados, valida, preencherTabela } from "./alunoUtil.js";
-import { insere, lista, remover } from "./alunoApi.js";
+import { spanErro, formAluno, preencheDados, valida, preencherTabela, preencheForm } from "./alunoUtil.js";
+import { insere, lista, obterPeloId, remover, altera } from "./alunoApi.js";
 
 document.addEventListener('DOMContentLoaded', async ()=>{
-//Requisição para listar
-try{
+    document.querySelector('#btnEnviar').value = "Calcular e inserir";
+    //Requisição para listar
+    try{
         let alunos = await lista();
         preencherTabela(alunos);
-     } catch (erro) {
+    } catch (erro) {
         exibeErro(spanErro, erro.message, 3000);
     }
 })
@@ -28,7 +29,12 @@ tblAlunos.addEventListener('click', async e => {
                 exibeErro(spanErro, erro.message, 3000)
             }
         }else if(botao.textContent === '[ALTERAR]'){
-            ;
+            try{
+                let aluno = await obterPeloId(botao.dataset.id);
+                preencheForm(aluno);
+            }catch(erro){
+                exibeErro(spanErro, erro.message, 3000);
+            }
         }
     }
 })
@@ -48,9 +54,15 @@ formAluno.addEventListener('submit', async e => {
         exibeErro( spanErro, msgErro, 3000);
         return; //Interrompe
     }
-    //Requisição para inserir
+    //Requisição para inserir ou alterar
+    aluno.id = (document.querySelector("#id").value)?document.querySelector('#id').value:0;
     try{
-        let dados = await insere( aluno );
+        let dados = null;
+        if( aluno.id <= 0) dados = await insere(aluno);
+        else {
+            dados = await altera(aluno);
+            document.querySelector('#btnEnviar').value = "Calcura e insere";
+        }
         preencheDados( dados );
         limpaForm(formAluno);
         setTimeout(()=>{
