@@ -27,17 +27,17 @@ function preencherTabela(alunos){
         const [tdId, tdNome, tdNota1, tdNota2, tdMedia, tdGrau, tdAcao] = ['td', 'td', 'td', 'td', 'td', 'td', 'td'].map(tagTd => document.createElement(tagTd));
         tdId.textContent = id;
         tdNome.textContent = nome;
+        tdMedia.textContent = media;
         tdNota1.textContent = nota1;
         tdNota2.textContent = nota2;
-        tdMedia.textContent = media;
         tdGrau.textContent = grau;
 
         const [btnExcluir, btnAlterar] = ['BUTTON', 'BUTTON'].map(tagBTN => document.createElement(tagBTN));
-        tdAcao.append(btnExcluir, btnAlterar);
-        btnAlterar.dataset.id = id
-        btnAlterar.textContent = '[ALTERAR]';
         btnExcluir.dataset.id = id
         btnExcluir.textContent = '[EXCLUIR]';
+        btnAlterar.dataset.id = id
+        btnAlterar.textContent = '[ALTERAR]';
+        tdAcao.append(btnExcluir, btnAlterar);
 
         linha.append(tdId, tdNome, tdNota1, tdNota2, tdMedia, tdGrau, tdAcao);
         corpoTabela.append(linha);

@@ -1,6 +1,6 @@
 import { limpaElementos, exibeErro, limpaForm } from "../js/util.js";
-import { spanErro, formAluno, preencheDados, valida, preencherTabela, preencheForm } from "./alunoUtil.js";
-import { insere, lista, obterPeloId, remover, altera } from "./alunoApi.js";
+import { spanErro, formAluno, preencheDados, valida, preencherTabela, preencheForm } from "./util.js";
+import { insere, lista, obterPeloId, remover, altera } from "./api.js";
 
 document.addEventListener('DOMContentLoaded', async ()=>{
     document.querySelector('#btnEnviar').value = "Calcular e inserir";

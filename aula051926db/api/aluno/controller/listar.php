@@ -1,16 +1,15 @@
 <?php
 declare(strict_types=1);
-require_once '../../util/funcoesUtil.php';
+require_once '../../util/funcoes.php';
+require_once '../model/funcoesBD.php';
+
 $alunos = [];
 
-$pdo = getPDO();
 try{
-    $sql = 'SELECT id, nome, nota1, nota2, media, grau FROM aluno';
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute();
-    $alunos = $stmt->fetchAll(PDO::FETCH_ASSOC); //retorna as linhas como matriz associativa
-}catch (PDOException $e){
-    responderJson(['erro'=>'Erro ao listar os alunos', 400]);
+    /**@var callable $listar */
+    $alunos = $listar();
+}catch(PDOException $e) {
+    responderJson(['erro' => "Erro ao listar: {$e->getMessage()}"], 400);
 }
-responderJson($alunos, 200)
+responderJson($alunos, 200);
 ?>
