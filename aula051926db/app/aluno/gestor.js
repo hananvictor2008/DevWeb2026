@@ -1,6 +1,9 @@
 import { limpaElementos, exibeErro, limpaForm } from "../js/util.js";
 import { spanErro, formAluno, preencheDados, valida, preencherTabela, preencheForm } from "./util.js";
-import { insere, lista, obterPeloId, remover, altera } from "./api.js";
+import { insere, lista, obterPeloId, remover, altera, obterPeloNome } from "./api.js";
+
+const tblAlunos = document.querySelector('#tblAluno tbody')
+const cxPesquisa = document.querySelector('#inputPesquisa')
 
 document.addEventListener('DOMContentLoaded', async ()=>{
     document.querySelector('#btnEnviar').value = "Calcular e inserir";
@@ -13,7 +16,11 @@ document.addEventListener('DOMContentLoaded', async ()=>{
     }
 })
 
-const tblAlunos = document.querySelector('#tblAluno tbody')
+cxPesquisa.addEventListener('input', async e => {
+    let alunos = await obterPeloNome(e.target.value)
+    preencherTabela(alunos)
+})
+
 tblAlunos.addEventListener('click', async e => {
     const elementoDom = e.target;
     console.log(elementoDom)

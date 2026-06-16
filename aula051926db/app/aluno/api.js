@@ -39,3 +39,9 @@ export async function altera(aluno) {
     }
     return dados;
 }
+
+export async function obterPeloNome(nome) {
+    let resposta = await fazRequisicaoAA(url +'obterPeloNome.php?nome='+nome)
+    let dados = await verificaErros(resposta) //não deveria ter um if(!dados)?
+    return dados;
+}

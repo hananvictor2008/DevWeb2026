@@ -46,6 +46,14 @@ $remover = function(int $id) use($pdo): int {
     $stmt->bindValue(':ID', $id, PDO::PARAM_INT);
     $stmt->execute();
     return $stmt->rowCount();
-}
+};
+
+$obterPeloNome = function(string $nome) use($pdo): array|null{
+    $sql = "SELECT id, nome, nota1, nota2, media, grau FROM aluno WHERE nome LIKE :NOME";
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindValue(":NOME", "%{$nome}%", PDO::PARAM_STR);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+};
 
 ?>
